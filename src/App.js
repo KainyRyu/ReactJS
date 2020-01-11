@@ -17,11 +17,14 @@ function App() {
       <DirectAttribute team='Watford' date='Saturday 18 January' time ='12:30'/>
       </div>
       <div className='players'>
-      <AddAttribute title='Sonny' position='Forward' score='5'  />
-      <AddAttribute title='Dele' position='Midfield' score='6'  />
-      <AddAttribute title='Harry' position='Forward' score='11' />
+      <AddAttribute title='Sonny' position='Forward' score='5' playerOfTheMonth='true'>
+        <playerOfTheMonth playerOfTheMonth='false'/>
+      </AddAttribute>
+      <AddAttribute title='Dele' position='Midfield' score='6' playerOfTheMonth='false' />
+      <AddAttribute title='Harry' position='Forward' score='11' playerOfTheMonth='false'/>
       </div>
       <Tottenham results={results} wins={wins} />
+      <playerOfTheMonth playerOfTheMonth='false'/>
     </div>
   );
 }
@@ -33,10 +36,20 @@ function AddAttribute(props) {
       <h3>Position : {props.position}</h3>
       <div>
         <div>Season Goals : {props.score}</div>
+        <playerOfTheMonth {props.playerOfTheMonth}/>
+
       </div>
 
     </div>
   );
+}
+
+function playerOfTheMonth (props) {
+  if ( props.playerOfTheMonth === true){
+    return <h4>"The Player of the month"</h4>
+  } else {
+    return <h4>"A good player"</h4>
+  }
 }
 
 function DirectAttribute({team, date, time}) {
