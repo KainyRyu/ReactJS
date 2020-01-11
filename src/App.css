@@ -2,3 +2,27 @@
   text-align: center;
 }
 
+.matches {
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+}
+
+.match {
+  padding:10px;
+  border:black 1px solid;
+  width: 1 flex;
+}
+
+.players {
+  margin: 10px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.player {
+  padding:10px;
+  border:black 1px solid;
+  width: 1 flex;
+}
