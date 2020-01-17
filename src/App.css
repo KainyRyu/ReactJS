@@ -2,31 +2,25 @@
   text-align: center;
 }
 
-.matches {
-  margin: 10px;
-  display: flex;
-  align-items: center;
-  flex-flow: column;
+header {
+  width: 100%;
+  height: 200px;
+  border-bottom: gray 2px solid;
+}
+.logo {
+  height: 50%;
+  margin: 30px auto;
 }
 
-.match {
-  padding:10px;
-  border:black 1px solid;
-  width: 1 flex;
+.theTeam{
+  margin: 0;
 }
 
-.players {
-  margin: 10px;
-  display: flex;
-  justify-content: space-evenly;
+.container {
+  border: black 1px solid;
+  margin-top: 30px;
 }
 
-.player {
-  padding:10px;
-  border:black 1px solid;
-  width: 1 flex;
-}
-
-.results {
-  border: black 1px dashed;
+.season {
+  border-top: #0f0f0f 1px dashed;
 }
