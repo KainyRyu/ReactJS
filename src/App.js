@@ -2,15 +2,17 @@ import React from 'react';
 import Spurs from './images/logo.png';
 // import Liverpool from './liverpool.jpg';
 // import Watford from './watford.jpg';
-// import Sonny from './images/son.png';
-// import Dele from './images/dele.png';
-// import Harry from './images/harry.png';
 // import Welcome from './tutorial/1render';
-// import {  } from './tutorial/2props';
-import { HomeOrAway, Goals, Appearances, Pos, GoodPlayer } from './tutorial/3conditional';
+import Son from './images/son.png';
+import Dele from './images/dele.png';
+import Harry from './images/harry.png';
+import { Player, Match } from './tutorial/2props';
+import { Goals, Pos } from './tutorial/3conditional';
 import './App.css';
 
 function App() {
+  let dates = ['14/01', '18/01', '22/01', '25/01']
+  let [middlesbrough, watford, norwich, southampton] = dates
   return (
     <div className="App">
       <header>
@@ -42,19 +44,21 @@ function App() {
               <Pos rank='7' />
             </div>
           </div>
-          <div className='squad container'>
+          <div className='container'>
             <h1>Squad</h1>
-            <GoodPlayer budweiserGoal={true} goal='5' /> <br/>
-            <Appearances appearances='16' />
+            <div className='squad'>
+            <Player name='Son' image={Son} position='Forward' budweiserGoal={true} goals='5' appearances='17'/>
+            <Player name='Dele' image={Dele} position='Midfield' budweiserGoal={false} goals='6' appearances='15' />
+            <Player name='Harry' image={Harry} position='Forward' budweiserGoal={false} goals='11' appearances='20' />
+            </div>
           </div>
           
         </div>
         <div className='matches container'>
-          <div className='match'>
-
-            <HomeOrAway match='home'/>
-            <HomeOrAway match='away'/>
-          </div>
+            <Match match='home' versus={'Middlesbrough'} date={middlesbrough} time='20:00' />
+            <Match match='away' versus={'Watford'} date={watford} time='12:30' />
+            <Match match='home' versus={'Norwich City'} date={norwich} time='19:30' />
+            <Match match='away' versus={'Southampton'} date={southampton} time='15:00' />
         </div>
       </body>
     </div>

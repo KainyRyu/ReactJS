@@ -24,3 +24,8 @@ header {
 .season {
   border-top: #0f0f0f 1px dashed;
 }
+
+.squad {
+  display: flex;
+  justify-content: space-evenly;
+}

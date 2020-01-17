@@ -1,4 +1,5 @@
 import React from 'react';
+import '../App.css';
 export { HomeOrAway, Goals, Appearances, Pos, GoodPlayer };
 
 function HomeOrAway(props) {
@@ -27,7 +28,7 @@ function Appearances(props) {
     function often() {
         return props.appearances > 15;
     }
-    return <label>{soMany() ? 
+    return <label>Appearances : {soMany() ? 
         'Very Often' : often() ? 
         'Quite Often' : 'A Bit Less'}</label>
 }
@@ -48,7 +49,7 @@ function Pos(props){
 
 function GoodPlayer({ budweiserGoal, goals }){
     return(
-        <label>{
+        <label>Great player? {
             budweiserGoal === true || goals > 10 ?
                 'Great Player' :
                 'Work harder'
