@@ -8,7 +8,7 @@ export { Player, Match };
 function Player({name, position, image, budweiserGoal, goals, appearances}) {
     return(
         <div className='player'>
-            <img src={image} />
+            <img src={image} alt={name}/>
             <h1>{name}</h1>
             <p>
                 Position : {position}<br/>
@@ -23,7 +23,7 @@ function Player({name, position, image, budweiserGoal, goals, appearances}) {
 function Match({ match, versus, date, time }) {
     return(
         <div className='match'>
-            <img src={Stadium} />
+            <img src={Stadium} alt='stadium'/>
             <h2>Tottenham VS {versus}</h2>
             <HomeOrAway match={match} />
             <h4>{date} {time}</h4>

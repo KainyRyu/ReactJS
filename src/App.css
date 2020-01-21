@@ -29,3 +29,8 @@ header {
   display: flex;
   justify-content: space-evenly;
 }
+
+.matches {
+  display: flex;
+  justify-content: space-around;
+}

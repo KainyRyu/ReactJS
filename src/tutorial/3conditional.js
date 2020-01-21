@@ -36,9 +36,9 @@ function Appearances(props) {
 function Pos(props){
     return( 
         <label>Season Rank : {
-            props.rank == 2 ?
+            props.rank === 2 ?
                 '2nd' :
-                props.rank == 3 ?
+                props.rank === 3 ?
                     '3rd' :
                     props.rank > 3?
                         'Out of ranks. Comon Hotspurs!!' :

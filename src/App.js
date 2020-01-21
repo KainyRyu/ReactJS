@@ -8,6 +8,7 @@ import Dele from './images/dele.png';
 import Harry from './images/harry.png';
 import { Player, Match } from './tutorial/2props';
 import { Goals, Pos } from './tutorial/3conditional';
+import { Clubs, ClubResult, ThePlayer } from './tutorial/4loops';
 import './App.css';
 
 function App() {
@@ -59,6 +60,15 @@ function App() {
             <Match match='away' versus={'Watford'} date={watford} time='12:30' />
             <Match match='home' versus={'Norwich City'} date={norwich} time='19:30' />
             <Match match='away' versus={'Southampton'} date={southampton} time='15:00' />
+        </div>
+        <div className='table'>
+          <h1>Season Table</h1>
+          <Clubs />
+          <ClubResult />
+          <ThePlayer />
+          <br/>
+          <br/>
+          {/* <ResultReverse /> */}
         </div>
       </body>
     </div>
